@@ -18,8 +18,8 @@ Gerador de QRCode PIX
                 .setAmount(new BigDecimal("1.00"))
                 .setTxid("TXID1234");
         
-    String qrcode = payload.getPayload();
-    System.out.println(qrcode);
+    	String qrcode = payload.getPayload();
+    	System.out.println(qrcode);
 ```
 
 ### Salvar em uma imagem o qrcode usando o gerador de qrcode https://github.com/kenglxn/QRGen
@@ -30,7 +30,13 @@ Gerador de QRCode PIX
                 .to(ImageType.JPG)
                 .withSize(200, 200).stream();
 
-    try (OutputStream outputStream = new FileOutputStream("qrcode.jpg")) {
-         byteArrayOutputStream.writeTo(outputStream);
-    }
+    	try (OutputStream outputStream = new FileOutputStream("qrcode.jpg")) {
+         	byteArrayOutputStream.writeTo(outputStream);
+    	}
 ```
+
+### Faça teste da a string que gerou aqui https://pix.nascent.com.br/tools/pix-qr-decoder/
+
+### Créditos
+
+Para assistir o vídeo dessa implementação, acesse: [Integração Pix PHP: Gerando payload e QR Code estático do Pix com PHP (YouTube)](https://youtu.be/eO11iFgrdCA)
